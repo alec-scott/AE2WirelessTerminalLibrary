@@ -5,7 +5,7 @@ import static de.mari_023.ae2wtlib.api.AE2wtlibAPI.MOD_NAME;
 import java.util.function.Function;
 
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import appeng.platform.neoforge.registries.DeferredRegister;
 
 import appeng.api.upgrades.Upgrades;
 import appeng.core.definitions.AEItems;

@@ -13,7 +13,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemStackTemplate;
-import net.neoforged.fml.ModList;
+import net.fabricmc.loader.api.FabricLoader;
 
 import appeng.api.upgrades.IUpgradeInventory;
 import appeng.menu.locator.ItemMenuHostLocator;
@@ -35,7 +35,7 @@ public class AE2wtlibAPI {
     }
 
     public static boolean isModPresent(String mod) {
-        return ModList.get().isLoaded(mod);
+        return FabricLoader.getInstance().isModLoaded(mod);
     }
 
     public static boolean hasQuantumBridgeCard(Supplier<IUpgradeInventory> upgrades) {

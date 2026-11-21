@@ -13,7 +13,7 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.component.ItemContainerContents;
-import net.neoforged.neoforge.network.codec.NeoForgeStreamCodecs;
+import appeng.platform.neoforge.network.codec.NeoForgeStreamCodecs;
 
 import appeng.api.config.IncludeExclude;
 import appeng.menu.locator.ItemMenuHostLocator;

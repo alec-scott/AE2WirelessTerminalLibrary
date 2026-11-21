@@ -1,0 +1,9 @@
+base { archivesName = 'ae2wtlib_api' }
+
+loom {
+    accessWidenerPath = file('src/main/resources/ae2wtlib_api.accesswidener')
+}
+
+jar {
+    from(rootProject.file('LICENSE')) { rename { "LICENSE_ae2wtlib_api" } }
+}

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.renderer.Rect2i;
-import net.neoforged.neoforge.client.network.ClientPacketDistributor;
+import appeng.platform.neoforge.client.network.ClientPacketDistributor;
 
 import appeng.client.Hotkeys;
 import appeng.client.Point;

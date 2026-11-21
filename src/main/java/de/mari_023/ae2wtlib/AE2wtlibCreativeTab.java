@@ -3,6 +3,7 @@ package de.mari_023.ae2wtlib;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,7 +23,7 @@ public class AE2wtlibCreativeTab {
     private static final List<ItemStack> items = new ArrayList<>();
 
     public static void init() {
-        var tab = CreativeModeTab.builder()
+        var tab = FabricCreativeModeTab.builder()
                 .title(TextConstants.CREATIVE_TAB)
                 .icon(() -> {
                     var terminal = AE2wtlibItems.UNIVERSAL_TERMINAL;

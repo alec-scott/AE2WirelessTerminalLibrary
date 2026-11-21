@@ -8,6 +8,7 @@ import appeng.api.features.HotkeyAction;
 import appeng.api.stacks.AEItemKey;
 import appeng.me.helpers.PlayerSource;
 
+import de.mari_023.ae2wtlib.PickAction;
 import de.mari_023.ae2wtlib.wct.CraftingTerminalHandler;
 
 public class StowHotkeyAction implements HotkeyAction {
@@ -21,7 +22,7 @@ public class StowHotkeyAction implements HotkeyAction {
             return false;
         if (handler.getTargetGrid() == null)
             return false;
-        if (stack.isNotReplaceableByPickAction(player, player.getInventory().getSelectedSlot()))
+        if (PickAction.isNotReplaceable(stack, player, player.getInventory().getSelectedSlot()))
             return false;
 
         stack.setCount(stack.getCount() - (int) handler.getTargetGrid().getStorageService().getInventory()

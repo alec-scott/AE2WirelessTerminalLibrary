@@ -21,8 +21,9 @@ public abstract class ServerPlayerMixin extends Player {
         super(level, gameProfile);
     }
 
+    // FABRIC: the local is "removed" in vanilla; NeoForge patches rename it to "selected"
     @Inject(method = "drop(Z)V", at = @At(value = "TAIL"))
-    public void restockDrop(boolean all, CallbackInfo ci, @Local(name = "selected") ItemStack item) {
+    public void restockDrop(boolean all, CallbackInfo ci, @Local(name = "removed") ItemStack item) {
         if (item.isEmpty())
             return;
 

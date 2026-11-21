@@ -1,7 +1,7 @@
 package de.mari_023.ae2wtlib.wct;
 
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.client.network.ClientPacketDistributor;
+import appeng.platform.neoforge.client.network.ClientPacketDistributor;
 
 import appeng.client.gui.AESubScreen;
 import appeng.client.gui.widgets.AECheckbox;

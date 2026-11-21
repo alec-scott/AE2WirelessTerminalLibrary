@@ -2,9 +2,9 @@ package de.mari_023.ae2wtlib.wct;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.transfer.ResourceHandler;
-import net.neoforged.neoforge.transfer.item.ItemResource;
-import net.neoforged.neoforge.transfer.item.PlayerInventoryWrapper;
+import appeng.platform.neoforge.transfer.ResourceHandler;
+import appeng.platform.neoforge.transfer.item.ItemResource;
+import appeng.platform.neoforge.transfer.item.PlayerInventoryWrapper;
 
 import appeng.api.inventories.InternalInventory;
 

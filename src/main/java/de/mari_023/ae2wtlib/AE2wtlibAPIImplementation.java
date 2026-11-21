@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.network.PacketDistributor;
+import appeng.platform.neoforge.network.PacketDistributor;
 
 import appeng.api.upgrades.IUpgradeInventory;
 import appeng.menu.locator.ItemMenuHostLocator;

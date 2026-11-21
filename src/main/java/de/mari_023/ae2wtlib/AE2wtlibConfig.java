@@ -1,21 +1,24 @@
 package de.mari_023.ae2wtlib;
 
-import org.apache.commons.lang3.tuple.Pair;
+import appeng.platform.neoforge.common.ModConfigSpec;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
-
-public record AE2wtlibConfig(ModConfigSpec.ConfigValue<Double> magnetCardRangeValue) {
+/**
+ * FABRIC: uses AE2 Fabricated's {@link ModConfigSpec} stand-in, which reads and writes the same TOML file
+ * ({@code config/ae2wtlib.toml}). The NeoForge {@code define(name, double)} becomes an unbounded
+ * {@code defineInRange}.
+ */
+public record AE2wtlibConfig(ModConfigSpec.DoubleValue magnetCardRangeValue) {
     public static final AE2wtlibConfig CONFIG;
     public static final ModConfigSpec SPEC;
 
     static {
-        Pair<AE2wtlibConfig, ModConfigSpec> pair = new ModConfigSpec.Builder().configure(AE2wtlibConfig::new);
-        CONFIG = pair.getLeft();
-        SPEC = pair.getRight();
+        var builder = new ModConfigSpec.Builder();
+        CONFIG = new AE2wtlibConfig(builder);
+        SPEC = builder.build();
     }
 
     AE2wtlibConfig(ModConfigSpec.Builder builder) {
-        this(builder.define("magnet_card_range", 16.0));
+        this(builder.defineInRange("magnet_card_range", 16.0, 0.0, Double.MAX_VALUE));
     }
 
     public double magnetCardRange() {

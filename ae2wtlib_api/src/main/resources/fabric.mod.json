@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "ae2wtlib_api",
+  "version": "${version}",
+  "name": "AE2WTLib API",
+  "description": "API for AE2WTLib (Fabric port).",
+  "authors": ["mari_023"],
+  "contact": {
+    "sources": "https://github.com/alec-scott/AE2WirelessTerminalLibrary",
+    "issues": "https://github.com/alec-scott/AE2WirelessTerminalLibrary/issues"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "mixins": ["ae2wtlib_api.mixins.json"],
+  "accessWidener": "ae2wtlib_api.accesswidener",
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "~${minecraft_version}",
+    "ae2": ">=${ae2_version}"
+  },
+  "custom": {
+    "modmenu": { "badges": ["library"], "parent": "ae2wtlib" }
+  }
+}

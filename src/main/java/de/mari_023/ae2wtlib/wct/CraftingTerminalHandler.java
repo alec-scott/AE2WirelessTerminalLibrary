@@ -37,7 +37,7 @@ public class CraftingTerminalHandler {
     }
 
     public static CraftingTerminalHandler getCraftingTerminalHandler(Player player) {
-        return player.getData(AE2wtlibAdditionalComponents.CT_HANDLER);
+        return AE2wtlibAdditionalComponents.getCraftingTerminalHandler(player);
     }
 
     protected void invalidateCache() {

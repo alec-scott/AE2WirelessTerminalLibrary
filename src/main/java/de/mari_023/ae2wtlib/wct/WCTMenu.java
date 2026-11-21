@@ -7,7 +7,7 @@ import org.jetbrains.annotations.Nullable;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.MenuType;
-import net.neoforged.neoforge.network.codec.NeoForgeStreamCodecs;
+import appeng.platform.neoforge.network.codec.NeoForgeStreamCodecs;
 
 import appeng.api.networking.IGridNode;
 import appeng.menu.MenuOpener;

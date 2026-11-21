@@ -8,7 +8,7 @@ import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.world.inventory.MenuType;
-import net.neoforged.neoforge.network.codec.NeoForgeStreamCodecs;
+import appeng.platform.neoforge.network.codec.NeoForgeStreamCodecs;
 
 import appeng.hotkeys.HotkeyActions;
 

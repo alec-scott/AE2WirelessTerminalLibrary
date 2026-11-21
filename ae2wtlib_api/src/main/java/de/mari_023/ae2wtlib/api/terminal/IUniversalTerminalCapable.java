@@ -3,7 +3,7 @@ package de.mari_023.ae2wtlib.api.terminal;
 import java.util.ArrayList;
 
 import net.minecraft.client.input.KeyEvent;
-import net.neoforged.neoforge.client.network.ClientPacketDistributor;
+import appeng.platform.neoforge.client.network.ClientPacketDistributor;
 
 import appeng.client.Hotkeys;
 import appeng.client.gui.WidgetContainer;

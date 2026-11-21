@@ -2,10 +2,6 @@ package de.mari_023.ae2wtlib;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.neoforged.neoforge.attachment.AttachmentType;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import appeng.api.features.GridLinkables;
 import appeng.api.features.HotkeyAction;
@@ -14,6 +10,7 @@ import appeng.client.InitScreens;
 import appeng.core.definitions.AEItems;
 import appeng.hotkeys.HotkeyActions;
 import appeng.items.tools.powered.WirelessTerminalItem;
+import appeng.platform.neoforge.client.event.RegisterMenuScreensEvent;
 
 import de.mari_023.ae2wtlib.api.AE2wtlibAPI;
 import de.mari_023.ae2wtlib.api.gui.Icon;
@@ -36,9 +33,6 @@ import de.mari_023.ae2wtlib.wut.recipe.Combine;
 import de.mari_023.ae2wtlib.wut.recipe.Upgrade;
 
 public class AE2wtlib {
-    public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister
-            .create(NeoForgeRegistries.ATTACHMENT_TYPES, AE2wtlibAPI.MOD_NAME);
-
     public static void registerTerminals() {
         AddTerminalEvent.register((event -> {
             event.builder("crafting", WCTMenuHost::new, WCTMenu.TYPE,

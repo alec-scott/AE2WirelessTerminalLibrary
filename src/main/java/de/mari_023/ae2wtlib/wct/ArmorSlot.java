@@ -23,7 +23,7 @@ public class ArmorSlot extends AppEngSlot {
 
     public boolean mayPlace(ItemStack stack) {
         return armor == Armor.OFFHAND
-                || stack.canEquip(armor.value.equipmentSlot(), playerInventory.player);
+                || playerInventory.player.isEquippableInSlot(stack, armor.value.equipmentSlot()); // FABRIC: NeoForge canEquip
     }
 
     @Override

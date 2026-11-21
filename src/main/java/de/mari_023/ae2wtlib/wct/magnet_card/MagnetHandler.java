@@ -13,7 +13,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.network.PacketDistributor;
+import appeng.platform.neoforge.network.PacketDistributor;
 
 import appeng.api.config.IncludeExclude;
 import appeng.api.stacks.AEItemKey;
@@ -112,7 +112,7 @@ public class MagnetHandler {
                 continue;
             if (magnetHost.getPickupFilter().matchesFilter(item,
                     magnetHost.getPickupMode())
-                    && !entityItemNearby.getPersistentData().contains("PreventRemoteMovement"))
+                    && !entityItemNearby.entityTags().contains("PreventRemoteMovement")) // FABRIC: entity tags, no NeoForge persistent data
                 entityItemNearby.playerTouch(player);
         }
     }
