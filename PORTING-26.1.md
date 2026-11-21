@@ -71,7 +71,10 @@ no Trinkets/Accessories slot support either.
   `ServerPlayer`, `ServerGamePacketListenerImpl`, `LivingEntity`, `ItemEntity`, `BowItem`, `Inventory`). Client
   mixin targets (`Gui.extractSlot` / `itemDecorations`, `MouseHandler.onScroll`, `WidgetContainer.compositeWidgets`,
   `AppEngClient`) were checked against the 26.1.2 bytecode with javap. Not yet run in a client.
+- 2026-11-21: the `v26.1-testing` client (full modpack) loads to the title screen with no ae2wtlib errors, and the
+  user tried it in game and reported it working. Released as build 1 (`v26.1.3-beta-mc26.1.2-fabric.1`, GitHub
+  pre-release).
 
 ## TODO
 
-- [ ] Client test in the `v26.1-testing` instance: see `Documents/git/port-testing/ae2wtlib.md`.
+- [ ] Finish the in-game checklist: `Documents/git/port-testing/ae2wtlib.md`.
